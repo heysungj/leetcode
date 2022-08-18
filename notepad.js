@@ -58,36 +58,36 @@
 //     i--;
 //   }
 // };
-// merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
+// // merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
 
-var maximumUnits = function (boxTypes, truckSize) {
-  let currentSize = 0;
-  let total = 0;
-  let sortedData = boxTypes.sort((a, b) => b[1] - a[1]);
-  console.log(sortedData);
-  if (sortedData[0][0] >= truckSize) {
-    return truckSize * sortedData[0][1];
-  }
-  for (let i = 0; i < boxTypes.length; i++) {
-    if (currentSize < truckSize) {
-      currentSize += sortedData[i][0];
-      console.log(currentSize);
-      total += sortedData[i][0] * sortedData[i][1];
+// var maximumUnits = function (boxTypes, truckSize) {
+//   let currentSize = 0;
+//   let total = 0;
+//   let sortedData = boxTypes.sort((a, b) => b[1] - a[1]);
+//   console.log(sortedData);
+//   if (sortedData[0][0] >= truckSize) {
+//     return truckSize * sortedData[0][1];
+//   }
+//   for (let i = 0; i < boxTypes.length; i++) {
+//     if (currentSize < truckSize) {
+//       currentSize += sortedData[i][0];
+//       console.log(currentSize);
+//       total += sortedData[i][0] * sortedData[i][1];
 
-      if (currentSize >= truckSize) {
-        total = total - (currentSize - truckSize) * sortedData[i][1];
-        console.log(total);
-        return total;
-      }
-    }
-  }
-};
+//       if (currentSize >= truckSize) {
+//         total = total - (currentSize - truckSize) * sortedData[i][1];
+//         console.log(total);
+//         return total;
+//       }
+//     }
+//   }
+// };
 
-maximumUnits(
-  [
-    [1, 3],
-    [2, 2],
-    [3, 1],
-  ],
-  4
-);
+// maximumUnits(
+//   [
+//     [1, 3],
+//     [2, 2],
+//     [3, 1],
+//   ],
+//   4
+// );
