@@ -16,12 +16,11 @@ var maxDepth = function(root) {
     function inOrder(root){
         if(!root)return 0;
         let left = inOrder(root.left)
-        max = Math.max(max, left)
         let right = inOrder(root.right)
-        max = Math.max(max, right)
-        return Math.max(left, right) +1
+        max = Math.max(left, right)
+        return max +1
     }
     
-    inOrder(root)
-    return max+1
+    return inOrder(root)
+    // return max+1
 };
