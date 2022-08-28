@@ -16,7 +16,7 @@ var kWeakestRows = function(mat, k) {
         
     }
     let sorted = arr.sort((a, b) => a[0] === b[0] ? a[1] - b[1] : a[0] - b[0])
-    console.log(sorted)
+    // console.log(sorted)
     
     let temp = sorted.slice(0,k);
     for(let j=0; j<temp.length; j++){
