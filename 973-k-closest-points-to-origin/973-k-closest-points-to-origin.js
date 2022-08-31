@@ -14,7 +14,7 @@ var kClosest = function(points, k) {
     
     tempResult.sort((a,b)=> a[0]-b[0] )
  
-    let temp = tempResult.slice(0,k)
+    // let temp = tempResult.slice(0,k)
     for(let j=0; j<k; j++) {
         outPut.push(points[tempResult[j][1]])
     }
