@@ -5,7 +5,7 @@
  */
 var topKFrequent = function(words, k) {
      const map1 = new Map();
-    // words.sort()
+    words.sort()
     if(words.length === 1) return words
     for(let i=0;i<words.length; i++) {
         if(!map1.get(words[i])){
@@ -15,7 +15,7 @@ var topKFrequent = function(words, k) {
         }
     }
         // map1.get(b) === map1.get(a) ? a.localeCompare(b) :
-    let temp = [...map1.keys()].sort((a,b) => map1.get(b) === map1.get(a) ? a.localeCompare(b) :  map1.get(b) - map1.get(a))
+    let temp = [...map1.keys()].sort((a,b) =>   map1.get(b) - map1.get(a))
     return (temp.slice(0,k))
    
 };
