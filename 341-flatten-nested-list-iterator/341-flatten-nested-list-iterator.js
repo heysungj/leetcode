@@ -65,9 +65,10 @@ NestedIterator.prototype.hasNext = function() {
  * @returns {integer}
  */
 NestedIterator.prototype.next = function() {
-    let element = this.result[this.index] 
-    this.index++
-    return element
+    // let element = this.result[this.index] 
+    // this.index++
+    // return element
+    return this.result[this.index++] 
 };
 
 /**
