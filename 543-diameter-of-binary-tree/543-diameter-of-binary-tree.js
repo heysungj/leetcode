@@ -17,17 +17,17 @@ var diameterOfBinaryTree = function(root) {
       if(!node)return 0;
       
       let left = inOrder(node.left)
-      left++
+      // left++
       let right = inOrder(node.right)
-      right++
+      // right++
       result = Math.max(left+right, result)
-      return Math.max(left, right)
+      return Math.max(left, right) +1
   }
     
      // console.log('left',inOrder(root.left) )
      // console.log('right',inOrder(root.right))
     inOrder(root)
-    return result-2
+    return result
 };
 
 
